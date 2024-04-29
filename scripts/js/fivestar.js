@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
       name: "Curaprox Swiss 5460 Ultra Soft Toothbrush",
       description:
         "Ultra soft toothbrushes with 0.10 mm bristles, assorted colors, pack of 3.",
-      price: "£18.99",
+      price: "£18.98",
       imageUrl:
         "https://m.media-amazon.com/images/I/817at2VVYHL._AC_UL320_.jpg",
       stars: "★★★★★",
