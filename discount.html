@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Affiliate Store</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/js/discountPokemon.js"></script>
+  </head>
+  <body class="bg-cool-gray-100 text-gray-700 bg-slate-700	">
+    <!-- Navigation Bar -->
+    <nav class="bg-slate-700 shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex">
+            <div class="flex-shrink-0 flex items-center">
+              <img
+                class="block lg:hidden h-8 w-auto"
+                src="https://via.placeholder.com/32x32"
+                alt="Logo"
+              />
+              <img
+                class="hidden lg:block h-8 w-auto"
+                src="https://via.placeholder.com/48x48"
+                alt="Logo"
+              />
+            </div>
+            <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+              <a
+                href="#"
+                class="text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                >5 Star</a
+              >
+              <a
+                href="#"
+                class="text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                >Discounts</a
+              >
+              <!-- Additional categories omitted for brevity -->
+            </div>
+          </div>
+          <div class="flex items-center">
+            <button
+              type="button"
+              class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+            >
+              Sign in
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Product Grid -->
+    <main class="mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-slate-700">
+      <div
+        id="products"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8"
+      >
+        <!-- Handlebars Template for Product Cards -->
+        <script id="product-template" type="text/x-handlebars-template">
+          {{#each this}}
+          <a href="{{url}}" class="flex flex-col">
+            <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between h-full">
+              <img src="{{imageUrl}}" alt="{{name}}" class="mb-3 w-32 h-32 object-cover rounded-md">
+              <div>
+                <h3 class="text-lg font-semibold text-indigo-700">{{name}}</h3>
+                <p class="text-sm text-gray-500 mb-2">{{description}}</p>
+                <p class="text-lg font-semibold">{{price}}</p>
+                <div class="text-yellow-400">{{stars}}</div>
+              </div>
+            </div>
+          </a>
+          {{/each}}
+        </script>
+      </div>
+    </main>
+
+    <!-- External JavaScript file -->
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
